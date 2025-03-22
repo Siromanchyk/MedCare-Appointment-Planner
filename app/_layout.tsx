@@ -1,7 +1,6 @@
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
-import 'react-native-reanimated';
 import { Stack } from 'expo-router';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -35,6 +34,24 @@ export default function RootLayout() {
         name='signUp'
         options={{
           headerShown: false
+        }}
+      />
+      <Stack.Screen
+        name='(tabs)'
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name='selections/hospital-selection'
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name='selections/doctor-selection'
+        options={{
+          headerShown: false,
         }}
       />
     </Stack>
