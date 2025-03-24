@@ -1,12 +1,11 @@
-import { View, StyleSheet } from "react-native";
-import { Link } from "expo-router";
+import { View, StyleSheet, Pressable, Text } from "react-native";
 
-export default function SignInButton() {
+export default function SignInButton({ onPress }: { onPress: () => void }) {
   return (
     <View style={styles.buttonContainer}>
-      <Link href='/(tabs)' style={styles.buttonText}>
-        Open Sesame
-      </Link>
+      <Pressable onPress={onPress}>
+        <Text style={styles.buttonText}>Open Sesame</Text>
+      </Pressable>
     </View>
   );
 }

@@ -1,24 +1,44 @@
 import { View, TextInput, StyleSheet } from "react-native";
 
-export default function InputFields() {
+export default function InputFields({
+  email,
+  setEmail,
+  password,
+  setPassword,
+  repeatPassword,
+  setRepeatPassword,
+}: {
+  email: string;
+  setEmail: (email: string) => void;
+  password: string;
+  setPassword: (password: string) => void;
+  repeatPassword: string;
+  setRepeatPassword: (repeatPassword: string) => void;
+}) {
   return (
     <View style={styles.inputContainer}>
-      <TextInput 
-        placeholder="Email" 
+      <TextInput
+        placeholder="Email"
         placeholderTextColor={'#D3D3D3'}
         style={styles.input}
+        value={email}
+        onChangeText={setEmail}
       />
-      <TextInput 
-        placeholder="Password" 
+      <TextInput
+        placeholder="Password"
         placeholderTextColor={'#D3D3D3'}
         secureTextEntry
         style={[styles.input, styles.passwordInput]}
+        value={password}
+        onChangeText={setPassword}
       />
-      <TextInput 
-        placeholder="Repeat password" 
+      <TextInput
+        placeholder="Repeat password"
         placeholderTextColor={'#D3D3D3'}
         secureTextEntry
         style={[styles.input, styles.passwordInput]}
+        value={repeatPassword}
+        onChangeText={setRepeatPassword}
       />
     </View>
   );

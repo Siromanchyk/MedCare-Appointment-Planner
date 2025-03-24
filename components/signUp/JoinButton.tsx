@@ -1,12 +1,11 @@
-import { StyleSheet, View } from "react-native";
-import { Link } from "expo-router";
+import { StyleSheet, View, Pressable, Text } from "react-native";
 
-export default function JoinButton() {
+export default function JoinButton({ onPress }: { onPress: () => void }) {
   return (
     <View style={styles.buttonContainer}>
-      <Link href='/_sitemap' style={styles.buttonText}>
-        Join Us
-      </Link>
+      <Pressable onPress={onPress}>
+        <Text style={styles.buttonText}>Join Us</Text>
+      </Pressable>
     </View>
   );
 }
@@ -16,13 +15,13 @@ const styles = StyleSheet.create({
     marginTop: 14,
     width: '100%',
     paddingVertical: 18,
-    backgroundColor: '#77DD77'
+    backgroundColor: '#77DD77',
   },
   buttonText: {
     fontFamily: 'RobotoRegular',
     fontWeight: '600',
     color: 'white',
     fontSize: 18,
-    textAlign: 'center'
-  }
-})
+    textAlign: 'center',
+  },
+});
