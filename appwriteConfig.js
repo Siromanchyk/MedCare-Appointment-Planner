@@ -10,4 +10,4 @@ export const account = new Account(client);
 export const databases = new Databases(client);
 export const ID_APPWRITE = ID;
 export const DATABASE_ID = '67ded4e1000e2d7114b9'; 
-export const COLLECTION_ID = '67dedff6000e93eb76d3';
+export const COLLECTION_ID = '67e189c600215bf232ee';

@@ -1,8 +1,9 @@
-interface Appointment {
-  hospital: { name: string };
-  doctor: { name: string };
-  time: string;
-  serviceTitle: string;
-}
+import Doctor from "./doctor";
+import Hospital from "./hospital";
 
-export default Appointment;
+export default interface Appointment {
+  hospital: Hospital;
+  serviceTitle: string;
+  doctor: Doctor;
+  time: string;
+}
